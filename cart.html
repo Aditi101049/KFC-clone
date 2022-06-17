@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #cart_items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 40px;
+            margin-left: 2%;
+            margin-bottom: 5%;
+            margin-top: 2%;
+        }
+        #cart_items img {
+            width: 400px;
+        }
+        #cart_items>div {
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #cart_items>div p {
+            padding-left: 5%;
+        }
+
+        #checkout_btn {
+            margin-left: 36%;
+            padding: 1%;
+            border-radius: 25px;
+            color: white;
+            background-color:goldenrod;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-bottom: 2%;
+        }
+
+        button {
+            margin-left: 24%;
+            padding: 1%;
+            border-radius: 25px;
+            color: white;
+            background-color:goldenrod;
+            font-size: 15px;
+            font-weight: bolder;
+            margin-bottom: 2%;
+            cursor: pointer;
+        }
+
+        h1 {
+            width: 80vw;
+            text-align: center;
+            margin-top: 20vh;
+        }
+    </style>
+    <title>Cart Page</title>
+</head>
+<body>
+    <div id="cart_items"></div>
+    <button id="checkout_btn" onclick="paymentPage()">Checkout and Proceed to Payment Page</button>
+
+
+    
+    <script>
+        let cart_dom = document.getElementById(`cart_items`)
+        if(JSON.parse(localStorage.getItem(`add_to_cart`)).length == 0){
+            let h1 = document.createElement(`h1`)
+            h1.innerHTML = `<a href="menu.html">Cart is Empty Go back to Menu Page<a>`
+                cart_dom.append(h1)
+                document.getElementById(`checkout_btn`).style.display = "none"
+
+            
+        }
+
+        let cart_data = JSON.parse(localStorage.getItem(`add_to_cart`))
+
+        cart_data.forEach((item) => {
+            let div = document.createElement(`div`)
+
+            let img = document.createElement(`img`)
+            img.src = item.image
+
+            let h3 = document.createElement(`p`)
+            h3.innerHTML = `<b>${item.name}<b>`
+            h3.style.fontSize = "18px"
+
+            let p1 = document.createElement(`p`)
+            p1.innerHTML = "₹ " + `<b>${item.price}</b>`
+
+            let div_2 = document.createElement(`div`)
+            div_2.className = "description"
+            let p2 = document.createElement(`p`)
+            p2.textContent = item.description
+            p2.style.fontSize = "15px"
+            p2.style.color = "gray"
+            div_2.append(p2)
+
+            let rmv_btn = document.createElement(`button`)
+            rmv_btn.textContent = "Remove Item from Cart"
+            rmv_btn.addEventListener(`click`, () => {
+                domUpdate(item)
+            })
+
+            div.append(img, h3, p1, div_2, rmv_btn)
+
+            cart_dom.append(div)
+        })
+
+
+        const paymentPage = () => {
+            location.href = "./payment.html"
+        }
+
+        const domUpdate = (item) => {
+            let new_arr = []
+            let data = JSON.parse(localStorage.getItem(`add_to_cart`))
+            data.forEach((ele) => {
+                if(ele.name != item.name){
+                    new_arr.push(ele)
+                }
+            })
+            localStorage.setItem(`add_to_cart`, JSON.stringify(new_arr))
+            displayData(new_arr)
+        }
+
+        const displayData = (new_arr) => {
+            if(JSON.parse(localStorage.getItem(`add_to_cart`)).length == 0){
+                cart_dom.textContent = ""
+                let h1 = document.createElement(`h1`)
+                h1.innerHTML = `<a href="menu.html">Cart is Empty Go back to Menu Page<a>`
+                cart_dom.append(h1)
+                document.getElementById(`checkout_btn`).style.display = "none"
+
+            
+        }
+            else{
+                cart_dom.textContent = ""
+                new_arr.forEach((item) => {
+                let div = document.createElement(`div`)
+
+                let img = document.createElement(`img`)
+                img.src = item.image
+
+                let h3 = document.createElement(`p`)
+                h3.innerHTML = `<b>${item.name}<b>`
+                h3.style.fontSize = "18px"
+
+                let p1 = document.createElement(`p`)
+                p1.innerHTML = "₹ " + `<b>${item.price}</b>`
+
+                let div_2 = document.createElement(`div`)
+                div_2.className = "description"
+                let p2 = document.createElement(`p`)
+                p2.textContent = item.description
+                p2.style.fontSize = "15px"
+                p2.style.color = "gray"
+                div_2.append(p2)
+
+                let rmv_btn = document.createElement(`button`)
+                rmv_btn.textContent = "Remove Item from Cart"
+                rmv_btn.addEventListener(`click`, () => {
+                    domUpdate(item)
+                })
+
+                div.append(img, h3, p1, div_2, rmv_btn)
+
+                cart_dom.append(div)
+            })
+            }
+        }
+        
+    </script>
+</body>
+</html>

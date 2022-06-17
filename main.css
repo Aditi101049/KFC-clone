@@ -1,0 +1,788 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.hole {
+    display: none;
+    width: 100vw;
+}
+
+#loader img {
+    width: 40vw;
+    height: 60vh;
+    margin-left: 30vmax;
+    margin-top: 10vmax;
+}
+
+#loader {
+    background-color: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: white;
+    /* border: solid 1px black; */
+    width: 100vw;
+
+    height: 100px;
+    z-index: 9999;
+    top: 0;
+    /* bottom: 20; */
+    position: fixed;
+}
+
+
+.navItemLeft {
+    display: flex;
+    padding-top: 6px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    position: relative;
+}
+
+.navItemLeft > a {
+    text-decoration: none;
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    padding-top: 20%;
+    margin-right: 50px;
+    text-decoration: none;
+    font-weight: 550;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 15px;
+    color: #202124;
+}
+
+.navItemRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-left: 40%;
+    position: relative;
+}
+
+a img {
+    width: 76px;
+    height: 23px;
+    margin-top: 38px;
+    margin-right: 44.26px;
+    margin-bottom: 39.48px;
+    margin-left: 130px;
+    cursor: pointer;
+}
+
+.accountIcon {
+    display: flex;
+    border-right: 1px solid #cecece;
+    cursor: pointer;
+    width: 50%;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 70px;
+    font-size: 13px
+}
+
+.accountIcon a {
+    margin-left: 20px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.accountIcon img {
+    width: 20px;
+    height: 20px;
+}
+
+.bucketIconDiv {
+    display: flex;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.bucketIconDiv span {
+    padding-top: 20px;
+    padding-left: 5px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.bucketIcon img {
+    width: 51px;
+    height: 51px;
+    margin-top: 8%;
+}
+
+#cartIconCount {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 15px;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Bottom of navbar starts */
+
+.navNext {
+    margin-top: 100px;
+    width: 100%;
+    height: 70px;
+    background-color: #202124;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navNext .text {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 15px;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.navNext button {
+    width: 180px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: #E4002B;
+    border: 1px solid #E4002B;
+    color: white;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* Bottom of navbar ends */
+
+
+.poster {
+    position: relative;
+    cursor: pointer;
+}
+
+.poster img {
+    width: 100%;
+}
+
+.belowPoster {
+    /* border: 1px solid black; */
+    background-color: rgb(248,247,245);
+    margin-top: -7px;
+}
+
+.threeLines {
+    width: 40px;
+    height: 20px;
+    background-image: repeating-linear-gradient(90deg, rgb(228, 0, 43), rgb(228, 0, 43) 8px, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 16px);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    /* background-repeat-x: initial;
+    background-repeat-y: initial; */
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    margin-left: 13%;
+}   
+
+.belowPosterText {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    /* line-height: 58px; */
+    text-transform: uppercase;
+    color: #202124;
+    margin-top: 29.71px;
+    margin-bottom: 30px;
+    margin-left: 13%;
+}
+
+.categories {
+    /* border: 1px solid black; */
+    margin-top: -3%;
+    margin-left: 18%;
+    display: flex;
+}
+
+.browseCategories {
+    margin-right: 31px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #202124;
+    margin-top: 100px;
+    margin-bottom: 55px;
+}
+
+.horizontalLine {
+    width: 65%;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: rgb(227, 227, 227);
+    margin-top: 125px;
+}
+
+.menuCardContainer {
+    display: flex;
+    margin-left: 280px;
+    margin-bottom: 30px;
+}
+
+.menuCard, .menuCardLast {
+    margin-right: 2%;
+    display: inline-block;
+    background: #FFFFFF;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 269px;
+    height: 280px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* border: 1px solid black; */
+}
+
+.menuCard img {
+    width: 269px;
+    height: 199px;
+    margin-left: -1px;
+    margin-top: -0.5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.menuCardLast img {
+    width: 207px;
+    height: 199px;
+    margin-left: 30px;
+    margin-top: -0.5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.menuText {
+    text-align: center;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #202124;
+    bottom: 7%;
+    margin-top: -10px;
+}
+
+.menuTextLast {
+    text-align: center;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    margin-top: -10px;
+    color: #202124;
+    font-weight: 100;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: rgb(32,33,36);
+    margin-top: 10%;
+}
+
+.stripsDiv {
+    display: flex;
+    margin-left: 240px;
+}
+
+.strips {
+    width: 15px;
+    height: 40px;
+    background-color: #E4002B;
+    margin-right: 13px;
+}
+
+.kfcLogo {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.kfcLogo img {
+    width: 60px;
+    height: 60px;
+}
+
+.footerFoot {
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.footerFoot ul {
+    margin-right: 50px;
+}
+
+.footerFoot ul li {
+    list-style: none;
+    color: #fff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.footerFoot ul li a {
+    list-style: none;
+    color: #fff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    cursor: pointer;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+
+.location {
+    display: flex;
+}
+
+.location div a {
+    color: #fff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 15px;
+}
+
+.locationLogo {
+    margin-right: 10px;
+}
+
+.locationLogo img {
+    width: 11px;
+    height: 15px;
+}
+
+.buttonLogos {
+    display: flex;
+    margin-left: 100px;
+}
+
+.buttonLogo1 {
+    margin-right: 30px;
+}
+
+.buttonLogo1 img, .buttonLogo2 img {
+    width: 119.7px;
+    height: 40.5px;
+    cursor: pointer;
+}
+
+.offers {
+    display: flex;
+    margin-top: 5%;
+    margin-left: -70px;
+    margin-bottom: 5%;
+    justify-content: space-around;
+}
+
+.offers a {
+    text-decoration: none;
+}
+
+.offers .viewAll {
+    text-align: center;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    margin-top: 5px;
+    color: #202124;
+    font-weight: 100;
+    color: #fff;
+    cursor: pointer;
+}
+
+.offersAndDeals h2 {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 35px;
+    line-height: 43px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.cardsContainer {
+    display: flex;
+    margin-left: 15%;
+    margin-bottom: 10%;
+}
+
+.card {
+    box-shadow: 0 4px 9px rgb(0 0 0 / 15%);
+    position: relative;
+    width: 310px;
+    height: 398px;
+    background-color: #f8f7f5;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.cardContentTitle {
+    height: 43px;
+    margin-right: 5%;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 43px;
+    color: #e4002b;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.cardContent {
+    width: 80%;
+    height: 48px;
+    margin-left: 5%;
+    letter-spacing: 0.1px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #202124;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.cardButton {
+    display: flex;
+    justify-content: inherit;
+    position: absolute;
+    bottom: -1%;
+    align-items: baseline;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-left: 7%;
+}
+
+.offerViewDetails {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    padding: initial;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #494949;
+    /* margin-left: 10%; */
+    width: 80px;
+    height: 20px;
+}
+
+.offerViewDetails:hover {
+    background-color: #d2d6ddb2;
+    cursor: pointer;
+}
+
+.cardImg img {
+    width: 100%;
+    height: 235px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.cardButton .redeemButton {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: transparent;
+    border: 1px solid #202124;
+    color: #202124;
+    margin-left: 20%;
+}
+
+.redeemButton:hover {
+    background-color: #202124;
+    color: #f8f7f5;
+    cursor: pointer;
+}
+
+.btnLeftDiv {
+    margin-left: 10%;
+    position: absolute;
+    padding-top: 12%;
+}
+
+.btnRightDiv {
+    margin-left: -170px;
+    z-index: 999;
+    padding-top: 14%;
+}
+
+.btnLeft {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 36px;
+    color: #202124;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.btnRight {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 36px;
+    color: #202124;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.btnLeft p, .btnRight p {
+    margin-top: -5px;
+}
+
+
+
+.bottomMost {
+    display: flex;
+    justify-content: center;
+    margin-left: 40%;
+}
+
+.copyright {
+    margin-right: 40%;
+    padding-top: 15px;
+}
+
+.copyright p {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    opacity: .9;
+    line-height: 12px;
+    color: #dbdbdb;
+}
+
+.socialMedia ul {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.socialMedia ul li {
+    margin-right: 10px;
+}
+
+
+
+#overlay    {
+    position: fixed;
+    display: none;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 10000;
+    background-color: rgba(32,33,36,.6509803921568628);
+    width: 100%;
+    height: 100%;
+}
+#popup {
+    position: absolute;
+    margin: auto;
+    width: 40%;
+    height: 64%;
+    left: 30%;
+    top: 18%;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+    align-items: center;
+}
+
+.popHeader {
+    display: flex;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(206, 196, 196);
+    width: 100%;
+    height: 60px;
+    margin-bottom: 8%;
+}
+
+.popHeader h2 {
+    margin-left: 5%;
+    margin-right: 60%;
+    padding-top: 10px;
+}
+
+.popHeader a {
+    padding-top: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+.popupTextH4 {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.popupContent {
+    width: 90%;
+}
+
+.popBtnDiv {
+    margin-top: 22%;
+    margin-left: 15%;
+}
+
+.popBtnDiv a {
+    text-decoration: none;
+}
+
+.popBtn {
+    padding: 11px;
+    width: 80%;
+    border-radius: 200px;
+    height: 44px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    /* margin: auto; */
+    font-style: normal;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    /* background-color: transparent; */
+    border: 1.5px solid #202124;
+    /* color: #202124; */
+
+    background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6  51%, #2BC0E4  100%);
+    margin: 10px;
+    /* padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase; */
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 25px;
+    display: block;
+}
+
+.popBtn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.cross:hover {
+    color:#E4002B;
+    font-size: 25px;
+}
+
+.popupTexth5 {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -.1px;
+    color: #494949;
+    margin-bottom: 5%;
+}
+
+.popupTextP {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -.1px;
+    color: #494949;
+}

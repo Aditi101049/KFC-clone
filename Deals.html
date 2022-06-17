@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dealsStyle.css">
+
+    <!-- Navbar css -->
+    <link rel="stylesheet" href="./dealsNavbar.css">
+ 
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Loader starts -->
+    <div id="loader">
+        <img src="https://online.kfc.co.in/KFC_Loader_Gif.gif" alt="Loading">
+       
+    </div>
+    <!-- Loader ends -->
+
+    <div class="hole">
+
+            <!-- Navbar bar -->
+        <div id="dealsNavbar">
+            <div id="navbar">
+                <div>
+                    
+                   <a href="index.html"> <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt=""></a>
+                    
+                </div>
+                
+                <div class="navItemLeft">
+                    <a href="menu.html">Menu</a>
+                    <a href="Deals.html">Deals</a>
+                </div>
+                
+                <div class="navItemRight">
+                    
+                    <div class="accountIcon">
+                        <img src="https://i.ibb.co/zR1JpWH/Account-Icon.jpg" />
+                        <a href="sign.html">Sign In</a>
+                    </div>
+                    
+                    <div class="bucketIconDiv">
+                        <span id="priceUpdate">₹0</span>
+                        <div class="bucketIcon">
+                            <img src="https://i.ibb.co/ygnYs9m/bucket-cart-icon.jpg"/>
+                           
+                            <div id="cartIconCount"><a href="cart.html"> 0 </a></div>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>
+        </div>
+
+        <div id="container1">
+            
+            <h2 class="deals">DEALS & OFFERS</h2>
+        </div>
+        <div id="lines">
+            <img src="componets/img/download.png" alt="">
+        </div>
+        <div id="container2">
+            <h2> OFFERS FOR YOU</h2>
+            <button onclick = "signUpPage()">Sign in to see exclusive offers & deals</button>
+        </div>
+        <div id="v1">
+            <header class="header">
+                <h2>OFFERS & DEALS</h2>
+                <button style="background-image: url(componets/img/img1.svg);" onclick="v1(false)"></button>
+            </header>
+            <section>
+                <h3>ADD 2 PC HOT N CRISPY CHICKEN @ JUST RS 99 ON MIN CART VALUE OF RS 499 OR MORE. APPLICABLE ON 2ND & 3RD ORDER FOR SIGNED IN USER.</h3>
+                <p>Valid to 31/12/30</p>
+                <p>Add 2 Pc Hot n Crispy Chicken @ just Rs 99 on min cart value of Rs 499 or more. Applicable on 2nd & 3rd order for signed in user.</p>
+            </section>
+            <footer>
+                <button>Redeem</button>
+            </footer>
+        </div>
+        <div id="main">
+           
+            <div class="main-div2" style="padding-bottom: 30px; background-color: #e4002b;">
+                <h3>SIGN IN TO SEE MORE EXCLUSIVE OFFERS & DEALS</h3>
+                <button class="button2" onclick="signUpPage()">Login</button>
+                <!-- <img src="./div.jpg" alt=""> -->
+            </div>
+            <div class="main-div3" style="padding-bottom: 30px;" >
+                <img src="componets/img/img.jpg" alt="">
+                <div class ="bg">
+                <h2>1 Pc free Chicken Zinger on ..</h2>
+                
+                <h5>1 Pc free Chicken Zinger on a cart value of 399 or above on first order. Only for registered users.</h5>
+                
+                    
+                    <div class="buttons">
+                        
+                        <a href="javascript:myBlurFunction(1);"><button class="view">View Details</button></a>
+                        <a href="menu.html"><button class="redeem">Redeem</button></a>
+                    </div>
+            
+            </div>
+            </div>
+            <div class="main-div4" style="padding-bottom: 30px;"> 
+                <img src="componets/img/img2.jpg" alt="">
+                <div class="bg">
+                    <h2>value of 399 or above on first</h2>
+                    <h5>1 Pc free Veg Zinger on a cart value of 399 or above on first order. Only for registered users</h5>
+                    <div class="button3">
+                        <a href="javascript:myBlurFunction(1);"><button class="view">View Details</button></a>
+                        <a href="menu.html"><button class="redeem">Redeem</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-div5" style="padding-bottom: 30px;">
+                <img src="componets/img/img3.jpg" alt="">
+                <div class="bg">
+                    <h2>Add 2 Pc Hot n Crispy...</h2>
+                    <h5> Add 2 Pc Hot n Crispy Chicken @ just Rs 99 on min cart value of Rs 499 or more. Applicable on 2nd & 3rd order for...</h5>
+                    <div class="button3">
+                        <a href="javascript:myBlurFunction(1);"><button class="view">View Details</button></a>
+                        <a href="menu.html"><button class="redeem">Redeem</button></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="main-div6" style="padding-bottom: 30px;">
+                <img src="componets/img/img4.jpg" alt="">
+                <div class="bg">
+                    <h2>Upto Rs 100 off on min cart..</h2>
+                    <h5>Upto Rs 100 off on min cart value of Rs 599 or more . Applicable on 4th order onwards for signed in user.</h5>
+                    <div class="button3">
+                        <a href="javascript:myBlurFunction(1);"><button class="view">View Details</button></a>
+                        <a href="menu.html"><button class="redeem">Redeem</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Popup Content Starts-->
+        <div id="overlay">
+            <div id="popup">
+                <div class="popHeader">
+                    <h2 class="offerDeals">OFFERS & DEALS</h2>
+                    <a href="javascript:myBlurFunction(0);"><div class="cross">&#9587;</div></a>
+                </div>
+
+                <div class="popupContent" >
+                    <h4 class="popupTextH4">1 PC FREE CHICKEN ZINGER ON A CART VALUE OF 399 OR ABOVE ON FIRST ORDER. ONLY FOR REGISTERED USERS.</h4>
+                    <h5 class="popupTexth5">Valid to 31/12/30</h5>
+                    <p class="popupTextP">1 Pc free Chicken Zinger on a cart value of 399 or above on first order. Only for registered users..</p>
+                    <div class="popBtnDiv" ><a href="menu.html"><button class="popBtn" >Redeem</button></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- Popup Content ends -->
+
+
+        <!-- Footer starts -->
+        <div class="footer">
+            
+            <div class="footerFoot">
+                <div class="kfcLogo">
+                    <img src="https://i.ibb.co/RgxGmkr/KFC-Logo.jpg" />
+                </div>
+
+                <ul>
+                    <li>KFC Food</li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li>Order Lookup</li>
+                    <li>Gift Card</li>
+                </ul>
+
+                <ul>
+                    <li>Support</li>
+                    <li>Get Help</li>
+                    <li>Contact Us</li>
+                    <li>KFC Feedbacks</li>
+                </ul>
+
+                <ul>
+                    <li>Legal</li>
+                    <li>Terms and Conditions</li>
+                    <li>Privacy Policy</li>
+                    <li>Diclaimer</li>
+                    <li>Caution Notice</li>
+                </ul>
+
+                <ul>
+                    <li>KFC India</li>
+                    <li>About KFC</li>
+                    <li>KFC Care</li>
+                    <li>Careers</li>
+                    <li>Our Golden Past</li>
+                </ul>
+
+                <div class="location">
+                    <div class="locationLogo">
+                        <img src="https://i.ibb.co/S6q7QpV/Find-KFC-removebg-preview.png" />
+                    </div>
+                    <div><a href="">Find a KFC</a></div>
+                </div>
+
+                <div class="buttonLogos">
+                    <div class="buttonLogo1">
+                        <img src="https://i.ibb.co/HhTsvz7/185-1855993-play-button-png-transparent.png" />
+                    </div>
+                    <div class="buttonLogo2">
+                        <img src="https://i.ibb.co/MBbWX3j/5a902db97f96951c82922874.png" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bottomMost">
+                <div class="copyright">
+                    <p>Copyright © KFC Corporation 2021 All Rights Reserved</p>
+                </div>
+                <div class="socialMedia">
+                    <ul>
+                        <li><img src="https://i.ibb.co/k4G3xQX/Social-Insta-White.png" /></li>
+                        <li><img src="https://i.ibb.co/DCbScVM/Social-Facebook-White.png" /></li>
+                        <li><img src="https://i.ibb.co/TY7zLqX/Social-Twitter-White.png" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+<script>
+    function signUpPage(){
+        window.location = "./sign.html"
+    }
+    function orderPage(){
+        window.location = "./startOrder.html"
+    }
+    // function v1(val){
+    //     var show = document.getElementById('v1')
+    //     if(val===true){
+    //         show.style.display = "flex"
+    //     }
+    //     // else{
+    //     //     show.style.display = "none"
+    //     // }
+    // }
+    
+    // Function for popup details on clicking viewDetails button
+    function myBlurFunction(state) {
+        // var containerElement = document.querySelectorAll('.footer');
+        var overlayEle = document.getElementById('overlay');
+    
+        if (state) {
+            overlayEle.style.display = 'block';
+            // containerElement.setAttribute('class', 'blur');
+        } else {
+            overlayEle.style.display = 'none';
+            containerElement.setAttribute('class', null);
+        }
+    }
+
+    // function for loader
+    setTimeout(gif, 2000);
+    
+    function gif(){
+        
+        document.getElementById("loader").style.display = "none";
+        document.querySelector(".hole").style.display = "block";
+    }
+</script>
+<script type="module" src="./dealsNavbar.js"></script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search" >
+    <button onclick="main()">Search</button>
+    <!-- <div id="places"></div> -->
+</body>
+    <script>
+         function main(){
+            let places = document.getElementById("search").value
+            // console.log(places)
+            async function search(){
+                try {
+                    let res = await fetch(`https://maps.google.com/maps?q=${places}&t=&z=15&ie=UTF8`)
+                    let data = await res.json();
+                    console.log(data)
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+            search()
+         }
+
+      
+        
+    </script>
+</html>

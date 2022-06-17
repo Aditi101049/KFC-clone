@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Dancing+Script&family=Fira+Sans+Condensed&family=Satisfy&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Fira Sans Condensed', sans-serif;
+        }
+        #container{
+            text-align: center;
+        }
+        h5{
+            padding-top: 50px;
+            padding-bottom: 28px;
+            font-weight: 500;
+
+        }
+        h3{
+            font-weight: 700;
+            font-size: 25px;
+            
+        }
+        .h3{
+            padding-bottom: 40px;
+        
+        }
+        p{
+            letter-spacing: 0.1px;
+            padding-bottom: 50px;
+        }
+        #text{
+            width: 500px;
+            height: 30px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-bottom: 20px;
+        }
+        #email{
+            width: 500px;
+            height: 30px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-bottom: 35px;
+        }
+        #button{
+            width: 100px;
+            height: 30px;
+            border-radius: 200px;
+            background-color: rgba(211, 211, 211, 0.986);
+            margin-bottom: 35px;
+        }
+        #or{
+            padding-bottom: 30px;
+        }
+        #btn{
+            width: 450px;
+            background: none;
+            height: 30px;
+            border-radius: 200px;
+            background-color: rgba(211, 211, 211, 0.986);
+            margin-bottom: 35px;
+        }
+        #container a {
+            text-decoration: none;
+        }
+
+        #container a button {
+            cursor: pointer;
+        }
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h5>Sign in/Sign up</h5>
+        <h3>WELCOME,</h3>
+        <h3 class="h3">Thankyou for being with us!</h3>
+        <p>please let us know you more.</p>
+        <input type="text" id = "text" placeholder="First Name">
+        <br>
+        <input type="email" id="email" placeholder="Email Address">
+        <br>
+        <button id="button" onclick="goToHome()">Submit</button>
+        <p id="or">or</p>
+        <a href="index.html"><button id="btn" onclick="goToHome()">Skip,Ask Me Later</button></a>
+    </div>
+</body>
+<script>
+    function goToHome(){
+        window.location = "menu.html"
+    }
+</script>
+</html>

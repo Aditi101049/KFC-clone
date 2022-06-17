@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Dancing+Script&family=Fira+Sans+Condensed&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Fira Sans Condensed', sans-serif;
+        }
+
+        #containerDiv {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: 10000;
+            background-color: rgba(32,33,36,.6509803921568628);
+            width: 100%;
+            height: 100%;
+        }
+     
+        #header{
+            display: flex;
+            margin-top: 20px;
+        }
+/* 
+        #div12 {
+            width: 100%;
+        } */
+
+        #header #div2 {
+            margin-right: 22%;
+            font-size: 1.5rem;
+        }
+      
+        #div1{
+            width: 92rem;
+            height: 50px;
+            font-size: 2rem;
+            margin-left: 40%;
+            
+        }
+        #section2{
+            text-align: center;
+            justify-content: center;
+            margin-top:4%;
+            font-size: 38px;
+        }
+        #section2 button{
+            border-radius: 200px;
+            border: 1.5px solid #202124;
+            width: 22rem ;
+            height: 3rem;
+            background: none transparent;
+            color: #202124;
+            margin-bottom: 1.7rem;
+        }
+    
+        .div1{
+            margin-bottom: 2.5%;
+        }
+
+        .div1 button {
+            cursor: pointer;
+        }
+
+        .cutSign {
+            text-decoration: none;
+            color: black;
+            font-weight: 900;
+        }
+
+        .cutSign:hover {
+            color:#E4002B;
+            font-size: 25px;
+        }
+
+        .startOrderDiv {
+            position: absolute;
+            margin: auto;
+            width: 60%;
+            height: 80%;
+            left: 20%;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            pointer-events: auto;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 0.3rem;
+            outline: 0;
+            align-items: center;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="containerDiv">
+        
+        <div class="startOrderDiv">
+            <div id="header" >
+                <div id="div1">
+                    <h2>Start Your Order</h2>
+                </div>
+                <div id="div2">
+                    <a href="Deals.html"><div class="cutSign">&#9587;</div></a>
+                </div>
+            
+           </div>
+          
+        
+            <div id="section2">
+                <div class="div1">
+                    <h3>HOW WOULD YOU LIKE TO RECEIVE </h3>
+                    <h3>YOUR ORDER?</h3>
+                </div>
+                <div class="div1">
+                    <button>Pick up</button><br>
+                    <button>Dine in</button><br>
+                    <button>Delivery</button><br>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

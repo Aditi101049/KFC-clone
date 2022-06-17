@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/manishhansal/KFC_website_clone/e892a11713fb3ed498ad9dee356e50efc542f451/images/KFC_Loader_Gif.gif" alt="">
+</body>
+</html>
+ <img src="./images/KFC_Loader_Gif.gif" alt="Loading">

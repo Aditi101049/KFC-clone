@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* body {
+            background-color: rgba(32,33,36,.6509803921568628);
+        } */
+          
+          #container{
+            box-sizing: border-box;
+            width: 600px;
+            align-items: center;
+            text-align: center;
+            margin-left: 450px;
+            /* border: 1px solid #cecece; */
+            /* border-radius: 20px; */
+            margin-top: 10%;
+           
+            background-color: white;
+        
+        }
+        #container .signIn a{
+            line-height: 24px;
+            color: #494949;
+            font-size: 14px;
+            font-weight: 500;
+            padding-top: 60px;
+            margin-bottom: 20%;
+            text-decoration: none;
+        }
+
+        .signIn {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        #container h3, p, #container>a {
+            font-family: sans-serif;
+        }
+
+        .submit {
+            width: 200px;
+            height: 50px;
+            border-radius: 25px;
+            margin-bottom: 50px;
+            font-size: 20px;
+            border: 1px solid #cecece;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .submit:hover {
+            font-size: 25px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        input {
+            width: 300px;
+            height: 50px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #cecece;
+            font-size: 15px;
+            border: transparent;
+        }
+        a{color: black;
+        text-decoration: none;}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div class="signIn">
+            <a href="sign.html">Sign in / Sign up</a>
+        </div>
+       
+        <div><img src="https://login.kfc.co.in/auth/resources/1vkce/login/kfcIndiaLoginUIDev_2021_10_27_16_49/images/KFC_logo.svg" alt=""></div>
+        <h3>WE JUST TEXTED YOU</h3>
+       
+        <p id="yourNumber"></p>
+        <a href="sign.html">Different Number?</a>
+        <br>
+        <br>
+        <input type="text"  placeholder="Enter Your Code Here">
+        <p>Your code will expire in </p>
+        <a href="#">Resend the code</a>
+        <br>
+        <br>
+        <button class="submit" onclick="goToName()">Submit</button>
+    </div>
+</body>
+      <script>
+          //Setting the login mobile number when the page reload.
+          window.onload = setNumb();
+
+          //Function for setting login mobile number
+          function setNumb(){
+            let val = localStorage.getItem("Number");
+            console.log(val)
+            let setNum = document.getElementById("yourNumber");
+            setNum.innerText = `Please enter the verification code we just send to ${val}`
+          }
+          
+          //Funtion to redirect to name page.
+          function goToName(){
+              window.location = "name.html"
+          }
+      </script>
+</html>
